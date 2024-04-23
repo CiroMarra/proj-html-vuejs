@@ -1,9 +1,9 @@
 <script>
-import AppLink from './AppLink.vue'
+import AppHero from './AppHero.vue'
 export default {
   name: 'AppHeader',
   components:{
-    AppLink
+    AppHero
   },
   data() {
     return {
@@ -48,10 +48,10 @@ export default {
 
 
 <template>
-  <AppLink :link="this.link"></AppLink>
+   
   <header>
-    <div class="bg-overlay"></div>
-    <nav class="navbar navbar-expand-lg">
+    <div class="bg-overlay">
+      <nav class="navbar navbar-expand-lg">
       <div class="container">
         <img src="../assets/img/menulogo.png" alt="">
         <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
@@ -79,8 +79,14 @@ export default {
           </div>
         </div>
       </div>
-    </nav>
+    </nav> 
+    <AppHero></AppHero>
+    </div>
+     
+    
   </header>
+
+
 </template>
 
 
@@ -88,6 +94,7 @@ export default {
 
 
 <style scoped>
+
 .circle-box {
   width: 40px;
   height: 40px;
@@ -145,7 +152,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 45vw;
   background-color: rgba(20, 20, 46, 0.5);
 }
 
