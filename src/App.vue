@@ -8,6 +8,7 @@ import './style/generic.sass'
 <template>
     <header>
         <AppHeader></AppHeader>
+
     </header>
     
 </template>

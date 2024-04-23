@@ -1,100 +1,119 @@
-<script setup>
+<script>
+import AppLink from './AppLink.vue'
+export default {
+  name: 'AppHeader',
+  components:{
+    AppLink
+  },
+  data() {
+    return {
+      link: [
+        {
+          text: 'HOME',
+          submenu: []
+        },
+        {
+          text: 'PAGES',
+          submenu: [
+            { text: 'About Us'},
+            { text: 'Matches' },
+            { text: 'Team' },
+            { text: 'Squad' },
+            { text: 'Squad Details' },
+            { text: 'Comming Soon' },
+            { text: '404' }
+          ]
+        },
+        {
+          text: 'TOURNAMENT',
+          submenu: []
+        },
+        {
+          text: 'SHOP',
+          submenu: []
+        },
+        {
+          text: 'BLOG',
+          submenu: []
+        },
+        {
+          text: 'CONTACT',
+
+        }
+      ]
+    }
+  }
+}
 </script>
 
+
 <template>
+  <AppLink :link="this.link"></AppLink>
   <header>
     <div class="bg-overlay"></div>
-    <section>
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <nav class="navbar navbar-expand-lg ">
-          <img src="../assets/img/menulogo.png" alt="">
-          <ul class="navbar me-auto my-2 my-lg-0 navbar-nav-scroll gap-5 mx-5" style="--bs-scroll-height: 100px;">
-              <li class="nav-item dropdown ms-color">
-                <a class="nav-link dropdown-toggle ms-color" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  HOME
-                </a>
-                <ul class="dropdown-menu ms-color">
-                  <li><a class="dropdown-item" href="#">About Us</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Matches</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Team</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Squad</a></li>
+        <img src="../assets/img/menulogo.png" alt="">
+        <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+            <li v-for="(link, index) in link" :key="index" class="nav-item">
+              <a :class="[{'ms-home-color': link.text === 'HOME'}, {'nav-link': true}, {'dropdown-toggle': link.text === 'HOME' || link.text === 'SHOP' || link.text === 'BLOG' || link.text === 'PAGES'}]" :id="link.text + 'Dropdown'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ link.text }}
+                <span v-if="link.text === 'PAGES' && link.submenu.length > 0" class="caret"></span>
+              </a>
+              <li class="nav-item dropdown"> 
+                <ul class="dropdown-menu drop-color" v-if="link.text === 'PAGES' && link.submenu.length > 0" :aria-labelledby="link.text + 'Dropdown'">
+                  <li v-for="(submenu, subIndex) in link.submenu" :key="subIndex">
+                    <a class="dropdown-item" :href="submenu.link">{{ submenu.text }}</a>
+                  </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle ms-color text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  PAGES
-                </a>
-                <ul class="dropdown-menu ms-color">
-                  <li><a class="dropdown-item" href="#">About Us</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Matches</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Team</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Squad</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link  ms-color text-white" href="#">
-                  TOURNAMENT
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle ms-color text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  SHOP
-                </a>
-                <ul class="dropdown-menu ms-color">
-                  <li><a class="dropdown-item" href="#">About Us</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Matches</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Team</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Squad</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle ms-color text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  BLOG
-                </a>
-                <ul class="dropdown-menu ms-color">
-                  <li><a class="dropdown-item" href="#">About Us</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Matches</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Team</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Squad</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link  ms-color text-white" href="#">
-                  CONTACT
-                </a>
-              </li>
+            </li>
           </ul>
-          
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </nav>
+          <div class="circle-box mx-2">
+            <svg class="svg svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path></svg>
+          </div>
+          <div class="circle-box mx-2">
+            <svg class="svg svg-inline--fa fa-bag-shopping" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bag-shopping" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M112 112C112 50.14 162.1 0 224 0C285.9 0 336 50.14 336 112V160H400C426.5 160 448 181.5 448 208V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V208C0 181.5 21.49 160 48 160H112V112zM160 160H288V112C288 76.65 259.3 48 224 48C188.7 48 160 76.65 160 112V160zM136 256C149.3 256 160 245.3 160 232C160 218.7 149.3 208 136 208C122.7 208 112 218.7 112 232C112 245.3 122.7 256 136 256zM312 208C298.7 208 288 218.7 288 232C288 245.3 298.7 256 312 256C325.3 256 336 245.3 336 232C336 218.7 325.3 208 312 208z"></path></svg>
+          </div>
+        </div>
       </div>
-    </section>
-  </header> 
+    </nav>
+  </header>
 </template>
 
+
+
+
+
 <style scoped>
+.circle-box {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 50%;
+}
+.svg {
+  width: 20px;
+  height: 20px;
+  color: #333287;
+}
+
 li {
   list-style: none;
 }
-.ms-color {
-  color: #05CC7C;
-  list-style: none;
-  font-weight:bold
+a {
+  text-decoration: none;
+}
+.ms-home-color {
+  color: #05CC7C !important;
+}
+
+.navbar-nav .nav-link {
+  color: white;
 }
 
 header {
@@ -113,5 +132,22 @@ header {
   width: 100%;
   height: 100%;
   background-color: rgba(20, 20, 46, 0.5);
+}
+
+.drop-color {
+  background-color: #202046;
+}
+.dropdown-item {
+  color: #00AC4D;
+}
+
+.dropdown-menu:focus {
+  color: white;
+}
+.navbar-nav .nav-link.show{
+  color: white;
+}
+.navbar-nav {
+  font-weight: bold;
 }
 </style>
