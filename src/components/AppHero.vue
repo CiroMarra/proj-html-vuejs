@@ -1,12 +1,14 @@
 <script>
+import AppSocial from './AppSocial.vue'
 export default {
   name: 'AppHero',
-  props: {
-    link: Object, // Definizione della prop link
+  components:{
+    AppSocial,
   },
-  mounted() {
-    console.log(this.link); // Accedere alla prop link
-  }
+  props: {
+    link: Object, 
+  },
+
 }
 </script>
 
@@ -23,19 +25,21 @@ export default {
       </div>
     </div>
   </div>
-  A
+<appSocial></appSocial>
 </template>
 
-<style>
+<style scoped>
 .circle-arrow {
   width: 38px;
   height: 38px;
   border-radius: 50%;
   justify-content: center; 
   align-items: center; 
+  color: #191935;
 }
 .svg {
   width: 12px;
+  color: #191935;
 }
 .card {
   background-color: transparent !important;
