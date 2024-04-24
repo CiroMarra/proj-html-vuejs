@@ -3,7 +3,18 @@ export default {
   name: 'AppMain',
   data() {
     return {
+      imageUrls: [
+        './src/assets/img/1.png',
+        './src/assets/img/2.png',
+        './src/assets/img/3.png',
+        './src/assets/img/4.png',
+        './src/assets/img/5.png',
+        './src/assets/img/6.png'
+      ]
     };
+  },
+  mounted() {
+    console.log(this.imageUrls);
   }
 }
 </script>
@@ -12,16 +23,10 @@ export default {
     <section class="ms-bg-section">
         <div class="container position-relative">
             <div class="box-img">
-                <img src="../assets/img/1.png" alt="" class="mx-4 py-3 px-2">
-                <img src="../assets/img/2.png" alt="" class="mx-4 py-3 px-2">
-                <img src="../assets/img/3.png" alt="" class="mx-4 py-3 px-2">
-                <img src="../assets/img/4.png" alt="" class="mx-4 py-3 px-2">
-                <img src="../assets/img/5.png" alt="" class="mx-4 py-3 px-2">
-                <img src="../assets/img/6.png" alt="" class="mx-4 py-3 px-2">
+                <img v-for="(imageUrl, index) in imageUrls" :key="index" :src="imageUrl" alt="" class="mx-4 py-3 px-2">
             </div>
         </div>
     </section>
-
 </template>
 
 <style>
@@ -38,6 +43,5 @@ export default {
     position: absolute;
     bottom: -100px;
     left: 40px;
-
  }
 </style>
