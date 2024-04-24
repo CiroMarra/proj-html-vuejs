@@ -1,6 +1,12 @@
 <script>
+import mainGame from './mainGame.vue'
+import AppGaming from './AppGamingArea.vue'
 export default {
   name: 'AppMain',
+  components:{
+    mainGame,
+    AppGaming,
+  },
   data() {
     return {
       imageUrls: [
@@ -25,16 +31,22 @@ export default {
             <div class="box-img">
                 <img v-for="(imageUrl, index) in imageUrls" :key="index" :src="imageUrl" alt="" class="mx-4 py-3 px-2">
             </div>
+            
         </div>
+        <mainGame></mainGame>    
+    </section>
+    <section>
+          <AppGaming></AppGaming>
     </section>
 </template>
 
-<style>
+<style scoped>
  .ms-bg-section {
     background-color: #191935;
-    height: 45vw;
+    height: 40vw;
     color: white;
  }
+
 
  .box-img {
     background-color: #202046;

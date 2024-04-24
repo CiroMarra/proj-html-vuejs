@@ -69,7 +69,7 @@ export default {
 
 }
 .ms-btn:hover {
-  color: black !important;
+  color: #191935 !important;
 
 }
 </style>
