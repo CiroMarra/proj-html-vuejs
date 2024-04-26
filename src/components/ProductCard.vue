@@ -10,19 +10,19 @@
   export default {
     name: 'ProductCard',
     props: {
-      name: String, // Define prop type as String
-      price: Number, // Define prop type as Number
-      image: String,  // Define prop type as String
+      name: String, 
+      price: Number, 
+      image: String, 
     },
     mounted() {
-    console.log(this.name); // Log the 'name' prop
-    console.log(this.price); // Log the 'price' prop
-    console.log(this.image); // Log the 'image' prop
+    console.log(this.name); 
+    console.log(this.price); 
+    console.log(this.image); 
   }
   };
   </script>
   
   <style scoped>
-  /* Styles for the product card */
+ 
   </style>
   
