@@ -23,7 +23,7 @@ export default {
                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores id nisi, cum illum optio molestias mollitia iure accusantium repellat consequuntur, debitis, dolorem quisquam dolor unde nesciunt repellendus ad fuga. Ab?
                                 </div>
                             </div>
-                        </div>
+                    </div>
                 </div>
                     <div class="col">
                         <div class="row">

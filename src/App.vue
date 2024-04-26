@@ -6,15 +6,72 @@ import './style/generic.sass';
 export default {
   components: {
     AppHeader,
-    AppMain,
-  }
+    AppMain, 
+  },
+  data() {
+    return {
+
+      links: [
+        {
+          id: 1,
+          text: 'HOME',
+          submenu: []
+        },
+        {
+          id: 2,
+          text: 'PAGES',
+          submenu: [
+            { text: 'About Us'},
+            { text: 'Matches' },
+            { text: 'Team' },
+            { text: 'Squad' },
+            { text: 'Squad Details' },
+            { text: 'Comming Soon' },
+            { text: '404' }
+          ]
+        },
+        {
+          id: 3,
+          text: 'TOURNAMENT',
+          submenu: []
+        },
+        {
+          id: 4,
+          text: 'SHOP',
+          submenu: []
+        },
+        {
+          id: 5,
+          text: 'BLOG',
+          submenu: []
+        },
+        {
+          id: 6,
+          text: 'CONTACT',
+          submenu: []
+        }
+      ]
+    };
+  },
 }
 </script>
 
 
 <template>
     <header>
-        <AppHeader></AppHeader>
+      <!-- <ProductCard
+        v-for="product in products"
+        :key="product.id"
+        :name="product.name"
+        :price="product.price"
+        :image="product.imageUrl"
+      /> -->
+    
+
+      <AppHeader 
+        :links="links"
+      
+      />
     </header>
     <main>
         <AppMain></AppMain>

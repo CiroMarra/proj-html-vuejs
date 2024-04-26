@@ -5,45 +5,20 @@ export default {
   components:{
     AppHero
   },
+  props:{
+    links: Array
+  },
+  mounted ()
+  {
+    console.log(this.links)
+  },
   data() {
     return {
-      link: [
-        {
-          text: 'HOME',
-          submenu: []
-        },
-        {
-          text: 'PAGES',
-          submenu: [
-            { text: 'About Us'},
-            { text: 'Matches' },
-            { text: 'Team' },
-            { text: 'Squad' },
-            { text: 'Squad Details' },
-            { text: 'Comming Soon' },
-            { text: '404' }
-          ]
-        },
-        {
-          text: 'TOURNAMENT',
-          submenu: []
-        },
-        {
-          text: 'SHOP',
-          submenu: []
-        },
-        {
-          text: 'BLOG',
-          submenu: []
-        },
-        {
-          text: 'CONTACT',
-
-        }
-      ]
+  
     }
   }
 }
+  
 </script>
 
 
@@ -56,7 +31,7 @@ export default {
         <img src="../assets/img/menulogo.png" alt="">
         <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
-            <li v-for="(link, index) in link" :key="index" class="nav-item">
+            <li v-for="(link, index) in links" :key="index" class="nav-item">
               <a :class="[{'ms-home-color': link.text === 'HOME'}, {'nav-link': true}, {'dropdown-toggle': link.text === 'HOME' || link.text === 'SHOP' || link.text === 'BLOG' || link.text === 'PAGES'}]" :id="link.text + 'Dropdown'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ link.text }}
                 <span v-if="link.text === 'PAGES' && link.submenu.length > 0" class="caret"></span>

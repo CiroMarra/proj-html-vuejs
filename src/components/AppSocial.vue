@@ -53,7 +53,7 @@ export default {
     margin: auto;
 }
 
-.circle-social:active {
+.circle-social:hover {
     background-color: #05cc7c;
 }
 

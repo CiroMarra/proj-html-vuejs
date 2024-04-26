@@ -1,11 +1,13 @@
 <script>
 import mainGame from './mainGame.vue'
 import AppGaming from './AppGamingArea.vue'
+import AppStreaming from './AppStreamingArea.vue'
 export default {
   name: 'AppMain',
   components:{
     mainGame,
     AppGaming,
+    AppStreaming,
   },
   data() {
     return {
@@ -35,8 +37,11 @@ export default {
         </div>
         <mainGame></mainGame>    
     </section>
-    <section>
+    <section id="gaming-area">
           <AppGaming></AppGaming>
+    </section>
+    <section id="streaming-area">
+      <AppStreaming></AppStreaming>
     </section>
 </template>
 
