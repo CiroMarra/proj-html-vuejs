@@ -2,12 +2,14 @@
 import mainGame from './mainGame.vue'
 import AppGaming from './AppGamingArea.vue'
 import AppStreaming from './AppStreamingArea.vue'
+import AppBattle from './AppBattle.vue'
 export default {
   name: 'AppMain',
   components:{
     mainGame,
     AppGaming,
     AppStreaming,
+    AppBattle,
   },
   data() {
     return {
@@ -42,6 +44,9 @@ export default {
     </section>
     <section id="streaming-area">
       <AppStreaming></AppStreaming>
+    </section>
+    <section id="battle-area">
+      <AppBattle></AppBattle>
     </section>
 </template>
 
