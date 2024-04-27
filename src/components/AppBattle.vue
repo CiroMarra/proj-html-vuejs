@@ -266,7 +266,7 @@ export default {
 
 .ms-bg-battle-area {
     background-color: #191935;
-    height: 95vw;
+    height: 80vw;
 }
 
 .card {

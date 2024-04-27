@@ -3,6 +3,8 @@ import mainGame from './mainGame.vue'
 import AppGaming from './AppGamingArea.vue'
 import AppStreaming from './AppStreamingArea.vue'
 import AppBattle from './AppBattle.vue'
+import AppTreading from './AppTreading.vue'
+
 export default {
   name: 'AppMain',
   components:{
@@ -10,6 +12,7 @@ export default {
     AppGaming,
     AppStreaming,
     AppBattle,
+    AppTreading,
   },
   data() {
     return {
@@ -47,6 +50,9 @@ export default {
     </section>
     <section id="battle-area">
       <AppBattle></AppBattle>
+    </section>
+    <section id="treading-area">
+      <AppTreading></AppTreading>
     </section>
 </template>
 
