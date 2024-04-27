@@ -83,12 +83,13 @@ export default {
 }
 
 .box-img {
-    padding-top: 20px;
-    width: 100%; 
+    margin: 20px;
+    width: 90%; 
     height: 300px; 
     background-color: #191935;
     margin-top: 20px;
     border-radius: 10%;
+    
 }
 
 .ms-card-img-top {
