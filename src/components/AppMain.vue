@@ -4,6 +4,7 @@ import AppGaming from './AppGamingArea.vue'
 import AppStreaming from './AppStreamingArea.vue'
 import AppBattle from './AppBattle.vue'
 import AppTreading from './AppTreading.vue'
+import AppMatch from './AppMatch.vue'
 
 export default {
   name: 'AppMain',
@@ -13,6 +14,7 @@ export default {
     AppStreaming,
     AppBattle,
     AppTreading,
+    AppMatch,
   },
   data() {
     return {
@@ -53,6 +55,9 @@ export default {
     </section>
     <section id="treading-area">
       <AppTreading></AppTreading>
+    </section>
+    <section id="match-area">
+      <AppMatch></AppMatch>
     </section>
 </template>
 
