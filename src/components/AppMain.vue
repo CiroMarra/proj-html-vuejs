@@ -5,6 +5,7 @@ import AppStreaming from './AppStreamingArea.vue'
 import AppBattle from './AppBattle.vue'
 import AppTreading from './AppTreading.vue'
 import AppMatch from './AppMatch.vue'
+import AppTeam from './AppTeam.vue'
 
 export default {
   name: 'AppMain',
@@ -15,6 +16,7 @@ export default {
     AppBattle,
     AppTreading,
     AppMatch,
+    AppTeam,
   },
   data() {
     return {
@@ -59,6 +61,10 @@ export default {
     <section id="match-area">
       <AppMatch></AppMatch>
     </section>
+    <section id="team-area">
+        <AppTeam></AppTeam>
+    </section>
+
 </template>
 
 <style scoped>
