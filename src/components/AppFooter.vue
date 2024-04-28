@@ -85,7 +85,7 @@ export default {
     bottom: 30%;
     left: 0;
     width: 100%;
-    height: 50px; /* Altezza desiderata del rettangolo rosso */
+    height: 50px;
 }
 
 .card-body {
@@ -95,14 +95,7 @@ export default {
     background-color: transparent !important;
 }
 
-.red-rectangle {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px; /* Altezza desiderata del rettangolo rosso */
-    background-color: red;
-}
+
 
 .ms-form-control {
     background-color: transparent;
