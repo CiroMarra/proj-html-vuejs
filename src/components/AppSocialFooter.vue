@@ -22,7 +22,7 @@ export default {
 <template>
      <div class="text d-flex gap-1">
         Copyright (c) RaxG | Designed by <div class="colore"> Ciro Marra</div> </div> 
-    <div class="socials">
+    <div class="socials-footer">
         <div v-for="social in socialIcons" :key="social.name" class="circle-social gap-5">
             <img :src="social.icon" :alt="social.name + ' Icon'" />
         </div>
@@ -69,7 +69,7 @@ export default {
     background-color: #05cc7c;
 }
 
-.socials {
+.socials-footer {
     color: white;
     position: absolute;
     left: 74%;

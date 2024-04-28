@@ -29,7 +29,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 
 .svg {
     color: white;
