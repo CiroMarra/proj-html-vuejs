@@ -6,6 +6,7 @@ import AppBattle from './AppBattle.vue'
 import AppTreading from './AppTreading.vue'
 import AppMatch from './AppMatch.vue'
 import AppTeam from './AppTeam.vue'
+import AppTestimonial from './AppTestimonial.vue'
 
 export default {
   name: 'AppMain',
@@ -17,6 +18,7 @@ export default {
     AppTreading,
     AppMatch,
     AppTeam,
+    AppTestimonial,
   },
   data() {
     return {
@@ -63,6 +65,9 @@ export default {
     </section>
     <section id="team-area">
         <AppTeam></AppTeam>
+    </section>
+    <section id="testimonial-area">
+      <AppTestimonial></AppTestimonial>
     </section>
 
 </template>
