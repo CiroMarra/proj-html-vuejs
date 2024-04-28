@@ -124,31 +124,6 @@ export default {
     background-color: transparent;
 }
 
-
-
-.svg-social {
-    width: 25px;
-}
-
-.circle-container {
-    position: absolute;
-    bottom: 94px; 
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-.box-social {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #333287; 
-    line-height: 40px; 
-    margin: 0 10px;
-    display: none;
-}
-
-
 .ns-circle {
     width: 40px; 
     height: 40px;
@@ -189,22 +164,9 @@ export default {
 }
 
 
-.svg  {
-    width: 20px;
-    height: 20px;
-    color: #191935;
-}
 
-.circle {
-    width: 40px; 
-    height: 40px;
-    background-color:#00ac4d;
-    border-radius: 50%; 
-    margin-left: 4px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
+
+
 .ms-h6 {
     color: #00ac4d;
     }
