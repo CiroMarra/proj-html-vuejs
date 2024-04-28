@@ -1,12 +1,14 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
 import './style/generic.sass';
 
 export default {
   components: {
     AppHeader,
     AppMain, 
+    AppFooter,
   },
   data() {
     return {
@@ -76,7 +78,14 @@ export default {
     <main>
         <AppMain></AppMain>
     </main>
+    <footer>
+      <AppFooter :links="links"
+      
+      
+      />
+    </footer>
 </template>
 
 <style scoped>
+
 </style>

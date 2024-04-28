@@ -8,6 +8,7 @@ import AppMatch from './AppMatch.vue'
 import AppTeam from './AppTeam.vue'
 import AppTestimonial from './AppTestimonial.vue'
 import AppShop from './AppShop.vue'
+import AppNews from './AppNews.vue'
 
 export default {
   name: 'AppMain',
@@ -21,6 +22,7 @@ export default {
     AppTeam,
     AppTestimonial,
     AppShop,
+    AppNews,
   },
   data() {
     return {
@@ -73,6 +75,9 @@ export default {
     </section>
     <section id="shop-area">
       <AppShop></AppShop>
+    </section>
+    <section id="news-area">
+      <AppNews></AppNews>
     </section>
 
 </template>
