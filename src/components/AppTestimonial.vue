@@ -6,23 +6,27 @@ export default {
     return {
       games: [
     {
-        title: "Cristiano Messi ",
-        description: "CEO/Founder",
+        title: "Mohammad Sala",
+        description: "Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.Cras ultricies ligula sed magna dictum porta.Donec rutrum congue leo eget.",
+        job: "CEO/Founder",
         image: "./src/assets/img/test1.png"
     },
     {
         title: "Sergio Naymer",
-        description: "Programmer",
+        description: "Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.Cras ultricies ligula sed magna dictum porta.Donec rutrum congue leo eget.",
+        job: "Programmer",
         image: "./src/assets/img/test2.png"
     },
     {
         title: "Antonela Roccuzzo",
-        description: "Project Manager",
+        description: "Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.Cras ultricies ligula sed magna dictum porta.Donec rutrum congue leo eget.",
+        job: "Project Manager",
         image: "./src/assets/img/test3.png"
     },
     {
         title: "Lionel Ramos",
-        description: "Game Designer",
+        description: "Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.Cras ultricies ligula sed magna dictum porta.Donec rutrum congue leo eget.",
+        job: "Game Designer",
         image: "./src/assets/img/test4.png"
     }
 ]
@@ -55,11 +59,9 @@ export default {
                                         <div class="card" style="width: 18rem;">
                                             <div class="card-body">
                                                 <h5 class="ms-title"><svg class="svg-inline--fa fa-quote-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"></path></svg></h5>
-                                                <p class="card-text">Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                                    Cras ultricies ligula sed magna dictum porta.
-                                                    Donec rutrum congue leo eget.</p>
-                                                <p class="ms-card-text">Mohammadd Sala</p>
-                                                <small>CEO/Founder</small>
+                                                <p class="card-text">{{ game.description }}</p>
+                                                <p class="ms-card-text">{{ game.title }}</p>
+                                                <small>{{ game.job }}</small>
                                             </div>
                                         </div>
                                     </div>
