@@ -32,9 +32,9 @@ export default {
             <div class="ms-container text-white d-flex align-content-center">
                 <h1 class="px-3">Our news Letter </h1>
                 <div class="box-text px-5 gap-2">
-                        <label for="inputPassword6"><svg class="svg-msg svg-inline--fa fa-message" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="message" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M511.1 63.1v287.1c0 35.25-28.75 63.1-64 63.1h-144l-124.9 93.68c-7.875 5.75-19.12 .0497-19.12-9.7v-83.98h-96c-35.25 0-64-28.75-64-63.1V63.1c0-35.25 28.75-63.1 64-63.1h384C483.2 0 511.1 28.75 511.1 63.1z"></path></svg></label>
+                        <label for="inputEmail6"><svg class="svg-msg svg-inline--fa fa-message" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="message" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M511.1 63.1v287.1c0 35.25-28.75 63.1-64 63.1h-144l-124.9 93.68c-7.875 5.75-19.12 .0497-19.12-9.7v-83.98h-96c-35.25 0-64-28.75-64-63.1V63.1c0-35.25 28.75-63.1 64-63.1h384C483.2 0 511.1 28.75 511.1 63.1z"></path></svg></label>
                             <div class="col-auto">
-                                <input type="password" id="inputPassword6"  class="ms-form-control" aria-describedby="passwordHelpInline" placeholder="Enter Your Email">
+                                <input type="email" id="inputEmail6"  class="ms-form-control" aria-describedby="passwordHelpInline" placeholder="Enter Your Email">
                             </div>
                         <div class="box-send text-center">
                             Subscribe
