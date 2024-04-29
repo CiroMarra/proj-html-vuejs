@@ -1,4 +1,4 @@
-<script>
+http://localhost:5173/<script>
 import FacebookIcon from '../assets/img/facebook.svg';
 import TwitterIcon from '../assets/img/twitter.svg';
 import LinkedinIcon from '../assets/img/linkedin.svg';
@@ -22,7 +22,7 @@ export default {
 <template>
      <div class="text d-flex gap-1">
         Copyright (c) RaxG | Designed by <div class="colore"> Ciro Marra</div> </div> 
-    <div class="socials-footer">
+    <div class="socials-footer gap-2">
         <div v-for="social in socialIcons" :key="social.name" class="circle-social gap-5">
             <img :src="social.icon" :alt="social.name + ' Icon'" />
         </div>
